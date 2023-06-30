@@ -8,8 +8,9 @@ red = (130, 0, 0)  # rgb values for red background
 blue = (8, 96, 168)  # rgb values for blue
 white = (255, 255, 255)  # rgb value for white
 
+# set to monitor size / resolution (reduce SCREEN_HEIGHT if you want to make it windowed)
 SCREEN_WIDTH = 1920
-SCREEN_HEIGHT = 1020
+SCREEN_HEIGHT = 1080
 
 X_CENTER = SCREEN_WIDTH / 2
 Y_CENTER = SCREEN_HEIGHT / 2
@@ -33,7 +34,7 @@ def reaction_test(attempts):
 
     def display_text(font, text, colour, x, y):
         text = font.render(text, True, colour)
-        text_rect = text.get_rect(center=(x, y))
+        text_rect = text.get_rect(center=(x, y))  # position text centered at x and y values
         screen.blit(text, text_rect)
         pygame.display.update()
 
