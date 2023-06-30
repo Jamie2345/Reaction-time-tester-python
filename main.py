@@ -65,7 +65,7 @@ def reaction_test(attempts):
         while (time.time() - start_wait) < delay:
             if left_click_pressed() and (time.time() - start_wait > 0.5):  # if mouse clicked early also allow them to click the mouse in the first 0.5s in case of accidental clicks after clicking to continue
                 change_bg(blue)
-                display_text(large_font, 'Too Soon!', white, X_CENTER, Y_CENTER - 100)  # -100 to position 100 px upwards on the y-axis, so it is above the text below 
+                display_text(large_font, 'Too Soon!', white, X_CENTER, Y_CENTER - 100)  # -100 to position 100 px upwards on the y-axis, so it is above the text below
                 display_text(smallest_font, "Click to continue", white, X_CENTER, Y_CENTER)
 
                 click_to_continue()
@@ -109,10 +109,10 @@ def reaction_test(attempts):
             click_to_continue()
 
             scores.append(speed)
-        else:
-            display_average(scores)
-            click_to_continue()
-            running = False
+
+        display_average(scores)
+        click_to_continue()
+        running = False
 
 
 reaction_test(5)
